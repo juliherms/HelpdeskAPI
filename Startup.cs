@@ -29,6 +29,7 @@ namespace Helpdesk.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //j.a.vasconcelos - adiciona o MVC ao nosso projeto via injecao de dependencia
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -44,7 +45,8 @@ namespace Helpdesk.API
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            //habilita o mvc
             app.UseMvc();
         }
     }

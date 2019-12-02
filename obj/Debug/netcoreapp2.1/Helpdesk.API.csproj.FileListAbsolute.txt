@@ -1,0 +1,14 @@
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\bin\Debug\netcoreapp2.1\Helpdesk.API.deps.json
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\bin\Debug\netcoreapp2.1\Helpdesk.API.runtimeconfig.json
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\bin\Debug\netcoreapp2.1\Helpdesk.API.runtimeconfig.dev.json
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\bin\Debug\netcoreapp2.1\Helpdesk.API.dll
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\bin\Debug\netcoreapp2.1\Helpdesk.API.pdb
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.csprojAssemblyReference.cache
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.csproj.CoreCompileInputs.cache
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.RazorAssemblyInfo.cache
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.RazorAssemblyInfo.cs
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.AssemblyInfoInputs.cache
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.AssemblyInfo.cs
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.RazorTargetAssemblyInfo.cache
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.dll
+C:\Users\j.a.vasconcelos\Documents\Workspace_Net\Helpdesk.API\obj\Debug\netcoreapp2.1\Helpdesk.API.pdb

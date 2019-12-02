@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Helpdesk.API.Controllers
 {
+    /*
+    * j.a.vasconcelos - classe responsavel por representar uma configuracao de rota
+    */
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
