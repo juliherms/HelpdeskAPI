@@ -19,7 +19,7 @@ namespace Helpdesk.API
     {
         public Startup(IConfiguration configuration)
         {
-            //realiza injecao de dependencia da nossa configuracao
+            //attribute dependency injection
             //appsettings.Development.json
             Configuration = configuration;
         }
@@ -29,7 +29,7 @@ namespace Helpdesk.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //j.a.vasconcelos - adiciona o MVC ao nosso projeto via injecao de dependencia
+            //j.a.vasconcelos - add  MVC dependency
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -46,7 +46,7 @@ namespace Helpdesk.API
             }
 
             //app.UseHttpsRedirection();
-            //habilita o mvc
+            //active MVC
             app.UseMvc();
         }
     }
