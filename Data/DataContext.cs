@@ -5,6 +5,6 @@ namespace Helpdesk.API.Data
     //j.a.vasconcelos - this class responsible mapping model to database
     public class DataContext : DbContext
     {
-        
+        public DataContext(DbContextOptions<DataContext> options) : base(options){}
     }
 }
