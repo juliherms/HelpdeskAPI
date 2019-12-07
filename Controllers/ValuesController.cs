@@ -6,6 +6,7 @@ using Helpdesk.API.Data;
 using Helpdesk.API.model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Helpdesk.API.Controllers
 {
@@ -26,12 +27,12 @@ namespace Helpdesk.API.Controllers
 
         // GET api/values
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             
             try{
                 //lista all applications
-                var results = _context.Applcations.ToList();    
+                var results = await _context.Applcations.ToListAsync();    
                 return Ok(results);//return status code 200
 
             }catch(System.Exception){
@@ -42,10 +43,11 @@ namespace Helpdesk.API.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<Application> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             //search applications id
-            return _context.Applcations.FirstOrDefault( x => x.Id == id);
+            var results = await _context.Applcations.FirstOrDefaultAsync(x => x.Id == id);
+            return Ok(results);
         }
 
         // POST api/values
