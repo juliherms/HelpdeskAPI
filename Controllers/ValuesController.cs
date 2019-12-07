@@ -45,9 +45,13 @@ namespace Helpdesk.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            //search applications id
-            var results = await _context.Applcations.FirstOrDefaultAsync(x => x.Id == id);
-            return Ok(results);
+            try{
+                //search applications id
+                var results = await _context.Applcations.FirstOrDefaultAsync(x => x.Id == id);
+                return Ok(results);
+            }catch(System.Exception){
+                return this.StatusCode(StatusCodes.Status500InternalServerError,"Erro to access database");
+            }
         }
 
         // POST api/values
