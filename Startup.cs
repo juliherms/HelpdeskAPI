@@ -31,7 +31,7 @@ namespace Helpdesk.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //j.a.vasconcelos - configure database
+            //j.a.vasconcelos - configure database - using lambda expressions
             services.AddDbContext<DataContext>(
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
