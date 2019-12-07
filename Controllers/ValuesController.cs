@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Helpdesk.API.Data;
+using Helpdesk.API.model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Helpdesk.API.Controllers
@@ -13,18 +15,28 @@ namespace Helpdesk.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+
+        public DataContext _context { get;}
+
+        public ValuesController(DataContext context)
+        {
+            this._context = context;
+        }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Application>> Get()
         {
-            return new string[] { "value1", "value2" };
+            //lista all applications
+            return _context.Applcations.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Application> Get(int id)
         {
-            return "value";
+            //search applications id
+            return _context.Applcations.FirstOrDefault( x => x.Id == id);
         }
 
         // POST api/values
