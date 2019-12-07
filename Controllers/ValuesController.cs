@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Helpdesk.API.Data;
 using Helpdesk.API.model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Helpdesk.API.Controllers
@@ -25,10 +26,18 @@ namespace Helpdesk.API.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<Application>> Get()
+        public IActionResult Get()
         {
-            //lista all applications
-            return _context.Applcations.ToList();
+            
+            try{
+                //lista all applications
+                var results = _context.Applcations.ToList();    
+                return Ok(results);//return status code 200
+
+            }catch(System.Exception){
+                //return error
+                return this.StatusCode(StatusCodes.Status500InternalServerError,"Error access to database");
+            }
         }
 
         // GET api/values/5
