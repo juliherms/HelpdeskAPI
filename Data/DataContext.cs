@@ -1,3 +1,4 @@
+using Helpdesk.API.model;
 using Microsoft.EntityFrameworkCore;
 
 namespace Helpdesk.API.Data
@@ -6,5 +7,8 @@ namespace Helpdesk.API.Data
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options){}
+
+        //j.a.vasconcelos -- adding collections in the class
+        public DbSet<Application> Applcations { get; set; }
     }
 }
