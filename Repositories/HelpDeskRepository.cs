@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Helpdesk.API.Repositories
 {
-    
+    //j.a.vasconcelos - this class responsible implement to repository
     public class HelpDeskRepository : IHelpDeskRepository
     {
         private readonly DataContext _context;
@@ -49,15 +49,29 @@ namespace Helpdesk.API.Repositories
             return await query.ToArrayAsync();
         }
 
-        public Task<Incident> GetAllIncidentsAsyncById(int id)
+        public async Task<Incident> GetAllIncidentsAsyncById(int IndicentId)
         {
-            throw new System.NotImplementedException();
+            //j.a.vasconcelos - query using lambda and linq
+            IQueryable<Incident> query = _context.Incidents
+            .Include(c => c.Application);
+
+            query = query.OrderByDescending(c => c.Id)
+            .Where(c => c.Id == IndicentId);
+
+            return await query.FirstOrDefaultAsync();
         }
 
-        public Task<Incident[]> GetAllIncidentsAsyncBySystem(int idSystem)
+        public async Task<Incident[]> GetAllIncidentsAsyncBySystem(int idSystem)
         {
-            throw new System.NotImplementedException();
-        }
+            //j.a.vasconcelos - query using lambda and linq
+            IQueryable<Incident> query = _context.Incidents
+            .Include(c => c.Application);
 
+            query = query.OrderByDescending(c => c.Id)
+            .Where(c => c.ApplicationId == idSystem);
+
+            return await query.ToArrayAsync();
+        }
+  
     }
 }

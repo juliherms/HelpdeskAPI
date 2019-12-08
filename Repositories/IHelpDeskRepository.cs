@@ -18,6 +18,6 @@ namespace Helpdesk.API.Repositories
 
         Task<Incident[]> GetAllIncidentsAsync();
 
-        Task<Incident> GetAllIncidentsAsyncById(int id);
+        Task<Incident> GetAllIncidentsAsyncById(int IndicentId);
     }
 }
