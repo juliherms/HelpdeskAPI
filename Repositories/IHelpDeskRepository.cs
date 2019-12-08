@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Helpdesk.API.Model;
 
 namespace Helpdesk.API.Repositories
 {
@@ -13,5 +14,10 @@ namespace Helpdesk.API.Repositories
 
         Task<bool> SaveChangesAsync();
 
+        Task<Incident[]> GetAllIncidentsAsyncBySystem(int idSystem);
+
+        Task<Incident[]> GetAllIncidentsAsync();
+
+        Task<Incident> GetAllIncidentsAsyncById(int id);
     }
 }
